@@ -1,0 +1,555 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+/*---------- header------------- */
+.navbar nav
+{
+    float: none;
+    text-align: center;
+}
+.navbar
+{
+    position: absolute;
+    z-index: 3;
+}
+*{
+	box-sizing: border-box;
+}
+ a{
+	text-decoration: none;
+	color: #eee;
+}
+
+nav{
+    padding-top: 0rem;
+    margin-top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* .brand{
+	font-size: 3rem;
+	font-weight: 300;
+	transform: translateX(-100rem);
+	animation: slideIn .5s forwards;
+}
+
+.brand span{
+	color: crimson;
+} */
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+/* nav ul li{
+	list-style: none;
+	transform: translateX(100rem);
+	animation: slideIn .5s forwards;
+}
+
+nav ul li:nth-child(1){
+	animation-delay: 0s;
+}
+
+nav ul li:nth-child(2){
+	animation-delay: .5s;
+}
+
+nav ul li:nth-child(3){
+	animation-delay: 1s;
+}
+
+nav ul li:nth-child(4){
+	animation-delay: 1.5s;
+} */
+
+nav ul li a{
+	padding: 1rem 0;
+	margin: 0 3rem;
+	position: relative;
+	letter-spacing: 2px;
+}
+
+nav ul li a:last-child{
+	margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: crimson;
+	left: 0;
+	transform: scaleX(0);
+	transition: all .5s;
+} 
+
+nav ul li a::before{
+	top: 0;
+	transform-origin: left;
+}
+
+nav ul li a::after{
+	bottom: 0;
+	transform-origin: right;
+}
+
+.overlay{
+	background-color: rgba(0,0,0,.95);
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 650ms;
+	transform: scale(0);
+	opacity: 0;
+    display: none;
+}
+
+ nav ul li a:hover::before,
+nav ul li a:hover::after{
+	transform: scaleX(1);
+} 
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
+
+@media screen and (max-width: 993px)
+{
+    .navbar
+    {
+        background-color: rgb(0, 0, 0,0.5);
+    }
+}
+
+/*---------- HOME------------- */
+.slider{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide
+{
+    transition: 2s ease-out;
+}
+.slide-img img
+{
+    height: 90vh;
+    width: 100%;
+}
+.slide-text
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    color: white;
+}
+.slide-text h1
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    margin-bottom: 50px;
+}
+.slide-text p
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: wheat;
+}
+/* buttons */
+.prev, 
+.next
+{
+   display: inline-block;
+   width: 50%;
+   height: 100%;
+   position: absolute;
+   cursor: pointer;
+ color: white;
+}
+.button .next
+{
+    display: flex;
+    justify-content: space-between;
+    top: 310px;
+    left: 95%;
+    width: 50px;
+    height: 45px;
+    background-repeat: no-repeat; 
+    overflow: hidden;
+} 
+.button .prev
+{
+    display: flex;
+    justify-content: space-between;
+    top: 310px;
+    left: 2%;
+    width: 50px;
+    height: 45px;
+    background-repeat: no-repeat; 
+    overflow: hidden;
+}
+.prev
+{
+    left: 0;
+}
+.next
+{
+    right: 0;
+}
+.prev:hover,
+.next:hover
+{
+   color: antiquewhite;
+}
+.next::after,
+.prev::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+}
+/*------------- story ------------*/
+ #story
+{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+}
+.story-text
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 50%;
+    /* margin: 7%; */
+    margin-bottom: 3%;
+}
+.story-text h1
+{
+    margin-bottom: 5%;
+    font-size: 3.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+   
+}
+ span
+{
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 200;
+}
+.story-text p
+{
+    margin: 1.5%;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.sub-section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:nowrap;
+}
+.round-img .img-1
+{
+    position: absolute;
+    right: 35%;
+    border-radius: 50%;
+    
+}
+.round-img .img-2
+{
+    position: relative;
+    z-index: 1;
+}
+.left-text 
+{
+    text-align: right;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    align-items: right;
+    margin-left: 10%;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.right-text
+{
+    text-align: left;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 10%;
+    align-items: left;
+    margin-right: 10%;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.right-text h1, .left-text h1
+{
+    margin-bottom: 5%;
+}
+/* ------ceremony-timer--------- */
+#ceremony
+{
+    margin-top: 10%;
+    height: 100vh;
+    background: linear-gradient(rgb(0, 0, 0,0.5),rgb(0, 0, 0,0.5)), url("images/i-4.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 190%;
+    width: 100%;
+}
+.ceremony-text
+{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.ceremony-text h1
+{
+    font-size: 5rem;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+.ceremony-text p
+{
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 10px;
+}
+.count
+{
+    margin: 40px 0;
+}
+.countdown
+{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255,0.3);
+    margin: 0 30px;
+    font-size: 1rem;
+}
+.countdown span
+{
+    display: block;
+    font-size: 26px;
+    margin: 14px;
+}
+
+/* ---------------memories---------- */
+#memories
+{
+    position: absolute;
+    top: 310%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+.memory-text
+{
+    width: 50%;
+    text-align: center;
+    margin: 5%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+ 
+}
+.memory-text h1
+{
+    text-align: center;
+    margin: 2%;
+    font-weight: 500;
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+}
+.memory-text p
+{
+    margin: 1.5%;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.mem-row > .mem-column {
+    padding: 0 8px;
+  }
+  
+  .mem-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .mem-column {
+    float: left;
+    width: 25%;
+    margin-bottom: 1%;
+  }
+  
+  /* The Modal (background) */
+  .mem-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
+  
+  /* Modal Content */
+  .mem-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 45%;
+  
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .mem-close {
+    color: white !important;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .mem-close:hover,
+  .mem-close:focus {
+    color: #999 !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    height: 60vh;
+    width: 60vh;
+  }
+  
+  /* Next & previous buttons */
+  .prevv,
+  .nextt {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .nextt {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prevv {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prevv:hover,
+  .nextt:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .mem-caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demons {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demons:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
