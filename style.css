@@ -12,11 +12,12 @@ body{
     float: none;
     text-align: center;
 }
-/* .navbar
+.navbar
 {
-    position: absolute;
-    z-index: 3;
-} */
+    /* position: absolute;
+    z-index: 3; */
+    position: relative;
+}
 *{
 	box-sizing: border-box;
 }
@@ -149,6 +150,7 @@ nav ul li a:hover::after{
     top: 0;
     left: 0;
 }
+
 .slide
 {
     transition: 2s ease-out;
@@ -253,7 +255,7 @@ nav ul li a:hover::after{
     text-align: center;
     flex-direction: column;
     max-width: 50%;
-    /* margin: 7%; */
+    margin: 5%;
     margin-bottom: 3%;
 }
 .story-text h1
@@ -333,10 +335,10 @@ nav ul li a:hover::after{
 /* ------ceremony-timer--------- */
 #ceremony
 {
-    margin-top: 10%;
+    margin-top:10%;
     height: 100vh;
     background: linear-gradient(rgb(0, 0, 0,0.5),rgb(0, 0, 0,0.5)), url("images/i-4.jpg");
-    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     /* position: absolute;
     top: 190%; */
@@ -384,11 +386,64 @@ nav ul li a:hover::after{
     margin: 14px;
 }
 
+/* ----------------accomodation----------- */
+#accomodation
+{
+    background-image:linear-gradient(rgb(255, 255, 255,0.3),rgb(255, 255, 255,0.3)), url(images/acc-5.webp);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+   justify-content: space-between;
+}
+.left-acc
+{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    
+}
+.left-acc h1
+{
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 3rem;
+    margin: 10%;
+}
+.left-acc p
+{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.right-acc
+{
+    display: flex;
+    margin-right: 10%;
+    justify-content: center;
+    align-items: center;
+}
+.right-acc img
+{
+    border: 15px white solid;
+    border-bottom: 70px white solid;
+    transform: rotate(9deg);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+    box-shadow: 0 15px 10px #777;
+}
+.right-acc:hover
+{
+    transition: all .4s ease-in-out;
+}
+
 /* ---------------memories---------- */
 #memories
 {
-    position: absolute;
-    top: 310%;
+    /* position: absolute;
+    top: 310%; */
     height: 80vh;
     display: flex;
     flex-direction: column;
