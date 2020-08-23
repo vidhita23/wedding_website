@@ -157,7 +157,7 @@ nav ul li a:hover::after{
 }
 .slide-img img
 {
-    height: 90vh;
+    height: 100vh;
     width: 100vw;
 }
 .slide-text
@@ -243,6 +243,7 @@ nav ul li a:hover::after{
 {
     background-color: white;
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -286,7 +287,6 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap:nowrap;
 }
-
 
 .round-img .img-1
 {
@@ -337,12 +337,12 @@ nav ul li a:hover::after{
 {
     margin-top:10%;
     height: 100vh;
+    width: 100vw;
     background: linear-gradient(rgb(0, 0, 0,0.5),rgb(0, 0, 0,0.5)), url("images/i-4.jpg");
     background-attachment: fixed;
     background-size: cover;
     /* position: absolute;
     top: 190%; */
-    width: 100%;
 }
 .ceremony-text
 {
@@ -389,10 +389,11 @@ nav ul li a:hover::after{
 /* ----------------accomodation----------- */
 #accomodation
 {
-    background-image:linear-gradient(rgb(255, 255, 255,0.3),rgb(255, 255, 255,0.3)), url(images/acc-5.webp);
+    background-image: url(images/acc-5.webp);
     background-position: center;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     display: flex;
    justify-content: space-between;
 }
@@ -409,15 +410,24 @@ nav ul li a:hover::after{
 .left-acc h1
 {
     letter-spacing: 1.5px;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 3rem;
-    margin: 10%;
+    margin: 5%;
+    text-align: center;
+}
+.left-acc h2
+{
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 7%;
 }
 .left-acc p
 {
     font-weight: 400;
     font-style: italic;
     font-size: 1.2rem;
+    text-align: center;
 }
 .right-acc
 {
@@ -442,9 +452,8 @@ nav ul li a:hover::after{
 /* ---------------memories---------- */
 #memories
 {
-    /* position: absolute;
-    top: 310%; */
     height: 80vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -610,3 +619,163 @@ nav ul li a:hover::after{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+/*----------- rsvp------------ */
+#empty
+{
+    /* position: absolute;
+    top: 570%; */
+    height: 60vh;
+}
+*
+{
+  
+    box-sizing: border-box;
+    outline: none;
+}
+#rsvp
+{
+    background-color:whitesmoke;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.left-rsvp
+{
+    display: flex;
+    margin-left: 15%;
+    justify-content: center;
+    align-items: center;
+}
+.left-rsvp img
+{
+    border: 15px white solid;
+    border-bottom: 70px white solid;
+    transform: rotate(-9deg);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+    box-shadow: 0 15px 10px #777;
+}
+
+.right-rsvp
+{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 17%;
+    
+}
+.right-rsvp h1
+{
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 2.7rem;
+    margin-bottom: 7%;
+    text-align: center;
+    
+}
+.wrapper
+{
+    
+    width: 100%;
+}
+.enquiry-form
+{
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+
+}
+.input-fields
+{
+    display: flex;
+    flex-direction: column;
+    width: 400%;
+}
+#list
+{
+    display: block;
+    color: grey;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid grey;
+ 
+}
+.list-holder, option
+{
+    margin-bottom: 0;
+    padding: 0;
+    margin-top: 10px;
+    
+}
+
+
+.input-fields .input ,
+textarea
+{
+    margin: 20px 0px  ;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid grey;
+    padding: 10px;
+}
+
+.ask
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+.ask .in-l
+{
+    margin-right: 2.5%;
+    
+}
+
+.btn
+{
+    outline: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+    margin: 10% 150px;
+    background-color: wheat;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.btn:hover
+{
+    background-color: rgb(248, 211, 141);
+}
+
+footer
+{
+    background-color: rgb(216, 191, 216,0.3);
+    width: 100vw;
+    height: 20vh;
+    text-align: center;
+    padding: 7%;
+}
+footer p
+{
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+}
+
+@media screen and (max-width: 767px)
+{
+    nav
+    {
+        display: none;
+    }
+
+}
