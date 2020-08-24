@@ -6,140 +6,20 @@ body{
 }
 
 
-/*---------- header------------- */
-.navbar nav
-{
-    float: none;
-    text-align: center;
-}
-.navbar
-{
-    /* position: absolute;
-    z-index: 3; */
-    position: relative;
-}
-*{
-	box-sizing: border-box;
-}
- a{
-	text-decoration: none;
-	color: #eee;
-}
 
-nav{
-    padding-top: 0rem;
-    margin-top: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-/* .brand{
-	font-size: 3rem;
-	font-weight: 300;
-	transform: translateX(-100rem);
-	animation: slideIn .5s forwards;
-}
-
-.brand span{
-	color: crimson;
-} */
-
-nav ul{
-    display: flex;
-    align-items: center;
-}
-
-/* nav ul li{
-	list-style: none;
-	transform: translateX(100rem);
-	animation: slideIn .5s forwards;
-}
-
-nav ul li:nth-child(1){
-	animation-delay: 0s;
-}
-
-nav ul li:nth-child(2){
-	animation-delay: .5s;
-}
-
-nav ul li:nth-child(3){
-	animation-delay: 1s;
-}
-
-nav ul li:nth-child(4){
-	animation-delay: 1.5s;
-} */
-
-nav ul li a{
-	padding: 1rem 0;
-	margin: 0 3rem;
-	position: relative;
-	letter-spacing: 2px;
-}
-
-nav ul li a:last-child{
-	margin-right: 0;
-}
-
-nav ul li a::before,
-nav ul li a::after{
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	background-color: crimson;
-	left: 0;
-	transform: scaleX(0);
-	transition: all .5s;
-} 
-
-nav ul li a::before{
-	top: 0;
-	transform-origin: left;
-}
-
-nav ul li a::after{
-	bottom: 0;
-	transform-origin: right;
-}
-
-.overlay{
-	background-color: rgba(0,0,0,.95);
-	position: fixed;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	transition: opacity 650ms;
-	transform: scale(0);
-	opacity: 0;
-    display: none;
-}
-
- nav ul li a:hover::before,
-nav ul li a:hover::after{
-	transform: scaleX(1);
-} 
-
-@keyframes slideIn {
-	from{
-
-	}
-	to{
-		transform: translateX(0);
-	}
-}
+/*---------- header-nav bar------------- */
 
 
-@media screen and (max-width: 993px)
-{
-    .navbar
-    {
-        background-color: rgb(0, 0, 0,0.5);
-    }
-}
+
+
+
+
+
+
+
+
+
+
 
 /*---------- HOME------------- */
 .slider{
@@ -163,7 +43,7 @@ nav ul li a:hover::after{
 .slide-text
 {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50% , -50%);
     text-align: center;
@@ -197,8 +77,9 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     top: 310px;
-    left: 95%;
-    width: 50px;
+    /* left: 95%; */
+    right: 1.5%;
+    width: 40px;
     height: 45px;
     background-repeat: no-repeat; 
     overflow: hidden;
@@ -237,6 +118,29 @@ nav ul li a:hover::after{
     background-repeat: no-repeat;
     background-position: center;
     margin: auto;
+}
+@media screen and (max-width: 767px)
+{
+    .slide-img img
+    {
+        max-width: 100vw;
+        height: 80vh;
+    }
+    .slide-text h1
+    {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .slide-text p
+    {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: wheat;
+    }
 }
 /*------------- story ------------*/
  #story
@@ -291,7 +195,12 @@ nav ul li a:hover::after{
 .round-img .img-1
 {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
+    width: 500px;
+    height: 500px;
 }
 .round-img .img-2
 {
@@ -331,6 +240,103 @@ nav ul li a:hover::after{
 .right-text h1, .left-text h1
 {
     margin-bottom: 5%;
+}
+@media screen and (max-width:1081px)
+{
+    #story
+    {
+        background-color: white;
+        height: 120vh;
+        width: 100vw;
+    }
+}
+@media screen and (max-width:767px)
+{
+    *
+    {
+        overflow-x: hidden;
+    }
+    #story
+    {
+        background-color: white;
+        height: 175vh;
+        width: 100%;
+        
+    }
+    .sub-section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+    .story-text
+    {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        max-width: 100%;
+        margin: 5%;
+        margin-bottom: 3%;
+    }
+    .story-text p
+    {
+        margin: 0%;
+        font-weight: 100;
+        font-style: italic;
+        font-size: 1rem;
+    }
+    .story-text h1
+    {
+        margin-bottom: 5%;
+        font-size: 2.5rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+    
+    }
+    .left-text 
+    {
+        text-align: right;
+        max-width: 70%;
+        display: flex;
+        align-items: right;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 1rem;
+        margin-right: 0%;
+        padding: 7px;
+    }
+    .right-text 
+    {
+        text-align: left;
+        max-width: 70%;
+        display: flex;
+        align-items: left;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 1rem;
+        margin-left: 0%;
+        margin-top: 2%;
+        padding: 7px;
+      
+    }
+    .right-text h1, .left-text h1
+    {
+        margin-bottom: 5%;
+    }
+    .round-img .img-1
+    {
+        position: absolute;
+        border-radius: 50%;
+        width: 350px;
+        height: 350px;
+    }
+    .round-img .img-2
+    {
+        width: 350px;
+        height: 350px;
+    }
 }
 /* ------ceremony-timer--------- */
 #ceremony
@@ -385,7 +391,41 @@ nav ul li a:hover::after{
     font-size: 26px;
     margin: 14px;
 }
-
+@media screen and (max-width:767px)
+{
+    #ceremony
+    {
+        margin-top:10%;
+        height: 120vh;
+        width: 100%;
+    }
+    .ceremony-text h1
+    {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        margin: 20px;
+    }
+    .count
+    {
+        margin: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .countdown
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(255, 255, 255,0.3);
+        margin: 5px 30px;
+        font-size: 1rem;
+    }
+}
 /* ----------------accomodation----------- */
 #accomodation
 {
@@ -438,6 +478,8 @@ nav ul li a:hover::after{
 }
 .right-acc img
 {
+    width: 450px;
+    height: 480px;
     border: 15px white solid;
     border-bottom: 70px white solid;
     transform: rotate(9deg);
@@ -447,6 +489,69 @@ nav ul li a:hover::after{
 .right-acc:hover
 {
     transition: all .4s ease-in-out;
+}
+
+@media screen and (max-width: 767px)
+{
+    #accomodation
+    {
+        height: 160vh;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-acc
+    {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        padding: 20px;
+        padding-bottom: 0;
+}
+    .left-acc h1
+    {
+        letter-spacing: 1px;
+        font-weight: 700;
+        font-size: 2rem;
+        margin: 5%;
+        text-align: center;
+    }
+    .left-acc h2
+    {
+        letter-spacing: 1.2px;
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 7%;
+    }
+    .left-acc p
+    {
+        font-weight: 400;
+        font-style: italic;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .right-acc
+    {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        /* margin: 20%; */
+        justify-content: center;
+        align-items: center;
+    }
+    .right-acc img
+    {
+        width: 270px;
+        height: 320px;
+        border: 7px white solid;
+        border-bottom: 50px white solid;
+        transform: rotate(9deg);
+        box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+        box-shadow: 0 15px 10px #777;
+    }
 }
 
 /* ---------------memories---------- */
@@ -773,9 +878,6 @@ footer p
 
 @media screen and (max-width: 767px)
 {
-    nav
-    {
-        display: none;
-    }
+    
 
 }
