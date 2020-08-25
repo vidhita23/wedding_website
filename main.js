@@ -1,3 +1,5 @@
+// slider
+
 const next = document.querySelector(".next");
 const prev = document.querySelector(".prev");
 const slides = document.querySelectorAll(".slide");
@@ -101,3 +103,13 @@ function showSlides(n) {
 }
 
 
+// header
+const headSlides = () => {
+  const burger = document.querySelector(".burger");
+  const head = document.querySelector(".head-links");
+
+  burger.addEventListener("click",() => {
+    navigator.classList.toggle(".head-active");
+  });
+}
+headSlides();

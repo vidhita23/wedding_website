@@ -17,9 +17,26 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#navbarResponsive">
+  <body>
     
     <section id="home">
+      <nav>
+        <div class="logo"></div>
+        <ul class="head-links" >
+            <li><a href="">HOME</a></li>
+            <li><a href="">STORY</a></li>
+            <li><a href="">CEREMONY</a></li>
+            <li><a href="">ITENEARY</a></li>
+            <li><a href="">ACCOMMODATION</a></li>
+            <li><a href="">MEMORIES</a></li>
+            <li><a href="">RSVP</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+        </div>
+    </nav>
      
 
       <div class="slider">
@@ -320,9 +337,9 @@
 
     <section id="empty"></section>
 
-    <!-- <section id="rsvp">
+    <section id="rsvp">
       <div class="left-rsvp">
-        <img src="images/i-6.jpg" alt="" style="width: 450px; height: 480px;">
+        <img src="images/i-6.jpg" alt="">
       </div>
       <div class="right-rsvp">
         <h1>Will You Attend?</h1>
@@ -341,7 +358,7 @@
                <option value="Ceremony">Cermony</option>
              </select>
           </div>
-            <textarea name="message" id="" cols="30" rows="5" placeholder="Message"></textarea>
+            <textarea name="message" id="" cols="30" rows="2" placeholder="Message"></textarea>
             <button class="btn">Submit</button>
           </div>
        </div>
@@ -349,9 +366,35 @@
         </div>
       </div>
     </section>
+   <section>
     <footer>
       <p>copryright ©,vidhita 2020</p>
-    </footer> -->
+    </footer>
+   </section>
+   <script>
+      function headS()
+       {
+           const burger = document.querySelector(".burger");
+           const head = document.querySelector(".head-links");
+           const headLinks = document.querySelectorAll(".head-links li");
+
+           burger.addEventListener("click",() => {
+               head.classList.toggle("head-active");
+
+              //  headLinks.forEach((link , index) =>{
+              //      if(link.style.animation)
+              //      {
+              //          link.style.animation = "";
+              //      }else
+              //      {
+              //          link.style.animation = "headLinkFade 0.5s ease forwards ${index / 7*1.5}s";
+              //      }
+              //  });
+               burger.classList.toggle("toggle");
+           });
+       }
+       headS();
+  </script>
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
