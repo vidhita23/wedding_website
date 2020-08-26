@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iteneary</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 8vh;
+      width: 100%;
+      font-style: italic;
+      background-color: rgb(0, 0, 0, 0.4);
+    }
+    .head-links {
+      display: flex;
+      justify-content: space-around;
+      width: 60%;
+    }
+    .head-links li {
+      list-style: none;
+    }
+
+    .head-links a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+    .head-links a:hover {
+      color: wheat;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+    .burger {
+      display: none;
+    }
+    @media screen and (max-width: 1024px) {
+      .head-links {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      /* body
+        {
+            overflow-x: hidden;
+        } */
+      .head-links {
+        position: absolute;
+        /* z-index: 8; */
+        left: 0;
+        height: 80vh;
+        width: 50%;
+        top: 8vh;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+      }
+      .head-links a {
+        color: white;
+      }
+      /* .head-links li
+        {
+            opacity: 0;
+        } */
+      nav {
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        background-color: rgb(0, 0, 0);
+      }
+      .burger {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .head-active {
+      transform: translateX(0);
+    }
+    @keyframes headLinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    .toggle .line1 {
+      transform: rotate(-45deg translate(-5px, 6px));
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotate(45deg translate(-5px, -6px));
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: rgb(245, 222, 179, 0.7);
+    }
+    #ietenary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .it-txt {
+      width: 40%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5%;
+    }
+    .it-txt h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+    }
+    .it-txt p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+    .vl {
+      border-left: 6px solid grey;
+      height: 1200px;
+      position: absolute;
+      left: 50%;
+      margin-left: -3px;
+      top: 55%;
+    }
+    img {
+      width: 400px;
+      height: 370px;
+      margin: 5%;
+    }
+    .img-11 {
+      margin: 0% 10%;
+    }
+    .img-12 {
+      margin: 0% 10% 5%;
+    }
+    .box-1 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .it-text {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 7% 15%;
+    }
+    @media screen and (max-width: 900px) {
+      .box-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .box-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+      }
+      .it-txt {
+        width: 90%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 20%;
+      }
+      .it-txt h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+      }
+      .it-txt p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 300;
+        font-style: italic;
+      }
+      .vl {
+        border-left: 6px solid grey;
+        height: 1300px;
+        position: absolute;
+        left: 2%;
+        margin-left: 7px;
+        margin: 5%;
+        top: 55%;
+      }
+      img {
+        width: 300px;
+        height: 270px;
+      }
+      .img-11 {
+        margin: 0% 0%;
+      }
+      .img-12 {
+        margin: 0% 0% 0%;
+      }
+      .box-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .it-text {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 7%;
+      }
+    }
+  </style>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="head-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html">STORY</a></li>
+        <li><a href="index.html">CEREMONY</a></li>
+        <li><a href="#ietenary">ITENEARY</a></li>
+        <li><a href="index.html">ACCOMMODATION</a></li>
+        <li><a href="index.html">MEMORIES</a></li>
+        <li><a href="index.html">RSVP</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+    </nav>
+    <section id="ietenary">
+      <div class="it-txt">
+        <h1>ITENEARY</h1>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s
+        </p>
+      </div>
+
+      <div class="box-1">
+        <img src="images/b-1.jpg" alt="" />
+        <div class="it-text">
+          <h1>Haldi</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s
+          </p>
+        </div>
+      </div>
+      <div class="box-1 box-2">
+        <div class="it-text">
+          <h1>Mehandi</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s
+          </p>
+        </div>
+        <img class="img-11" src="images/b-2.jpg" alt="" />
+      </div>
+      <div class="box-1 box-3">
+        <img class="img-12" src="images/b-3.jpg" alt="" />
+        <div class="it-text">
+          <h1>sangeet</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s
+          </p>
+        </div>
+      </div>
+      <div class="vl"></div>
+    </section>
+    <script>
+      function headS() {
+        const burger = document.querySelector(".burger");
+        const head = document.querySelector(".head-links");
+        const headLinks = document.querySelectorAll(".head-links li");
+
+        burger.addEventListener("click", () => {
+          head.classList.toggle("head-active");
+
+          burger.classList.toggle("toggle");
+        });
+      }
+      headS();
+    </script>
+  </body>
+</html>
