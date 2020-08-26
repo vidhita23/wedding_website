@@ -69,16 +69,16 @@ nav {
     height: 80vh;
     width: 50%;
     top: 8vh;
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: translateX(-100%);
     transition: transform 0.5s ease-in;
   }
-  .head-links a {
+  /* .head-links a {
     color: black;
-  }
+  } */
   /* .head-links li
         {
             opacity: 0;
@@ -87,7 +87,7 @@ nav {
     display: flex;
     justify-content: left;
     align-items: left;
-    background-color: rgb(255, 255, 255, 0.8);
+    background-color: rgb(0, 0, 0);
   }
   .burger {
     display: block;
