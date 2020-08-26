@@ -796,7 +796,7 @@ footer p {
 
 @media screen and (max-width: 900px) {
   #rsvp {
-    height: 140vh;
+    height: 200vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -809,6 +809,7 @@ footer p {
     margin-top: 5%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10%;
   }
   .left-rsvp img {
     width: 270px;
