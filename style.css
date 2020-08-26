@@ -737,19 +737,13 @@ textarea {
 .ask .in-l {
   margin-right: 2.5%;
 } */
-.checkbox {
+/* .checkbox {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
 }
-.checkbox h3 {
-  color: grey;
-  letter-spacing: 1.5px;
-  margin: 5% 0;
-  font-style: italic;
-  text-align: left;
-}
+
 .haldi {
   display: flex;
   align-items: center;
@@ -763,12 +757,40 @@ textarea {
 .ccc-1 {
   margin: 20px 5px;
   padding: 0px;
+} */
+input[type="checkbox"] {
+  background: transparent;
+  margin: 3%;
+}
+.checkbox h3 {
+  color: grey;
+  letter-spacing: 1.5px;
+  margin: 5% 0;
+  text-align: center;
+}
+.check-list-1 {
+  margin: 5%;
+  display: flex;
+  margin-bottom: 2%;
+}
+.check-list-2 {
+  margin: 5%;
+  display: flex;
+  margin-top: 2%;
+}
+label {
+  margin: 3%;
+  font-size: 1.2rem;
+}
+.cc-1 {
+  margin: 3% 0%;
+  font-size: 1.2rem;
 }
 .btn {
   outline: none;
   border: none;
   cursor: pointer;
-  margin: 10% 150px;
+  margin: 5% 150px;
   background-color: wheat;
   font-style: italic;
   font-weight: 300;
