@@ -12,12 +12,12 @@ body {
   padding: 0;
 }
 nav {
-  position: absolute;
-  position: fixed;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute !important;
+  position: fixed !important;
+  z-index: 2 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
   min-height: 8vh;
   width: 100%;
   font-style: italic;
@@ -84,9 +84,9 @@ nav {
             opacity: 0;
         } */
   nav {
-    display: flex;
-    justify-content: left;
-    align-items: left;
+    display: flex !important;
+    justify-content: left !important;
+    align-items: left !important;
     background-color: rgb(0, 0, 0);
   }
   .burger {
@@ -742,12 +742,7 @@ textarea {
   background: transparent;
   margin: 3%;
 }
-.checkbox h3 {
-  color: grey;
-  letter-spacing: 1.5px;
-  margin: 5% 0;
-  text-align: center;
-}
+
 .check-list-1 {
   margin: 5%;
   display: flex;
@@ -766,10 +761,11 @@ label {
   margin: 3% 0%;
   font-size: 1.2rem;
 } */
-.container {
+.c-container {
   /* display: block; */
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
+  padding-right: 5px;
   margin-bottom: 12px;
   cursor: pointer;
   font-size: 22px;
@@ -778,9 +774,14 @@ label {
   -ms-user-select: none;
   user-select: none;
 }
-
+.check-list h3 {
+  color: grey;
+  letter-spacing: 1.5px;
+  margin: 5% 0;
+  text-align: center;
+}
 /* Hide the browser's default checkbox */
-.container input {
+.c-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -789,7 +790,7 @@ label {
 }
 
 /* Create a custom checkbox */
-.checkmark {
+.c-checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -800,32 +801,32 @@ label {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.c-container:hover input ~ .c-checkmark {
   background-color: transparent;
   border: 2px solid teal;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.c-container input:checked ~ .c-checkmark {
   background-color: teal;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+.c-checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.c-container input:checked ~ .c-checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 5px;
-  top: 2px;
+.c-container .c-checkmark:after {
+  left: 4px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -835,7 +836,7 @@ label {
   transform: rotate(45deg);
 }
 .c-list-1 {
-  margin: 7% 0;
+  margin: 7% 0%;
 }
 
 .btn {
@@ -912,5 +913,18 @@ footer p {
     font-size: 2.7rem;
     margin-bottom: 7%;
     text-align: center;
+  }
+  .btn {
+    height: 6vh;
+    width: 25vw;
+  }
+  .c-list-1 {
+    margin-right: 17%;
+  }
+  .c-list-2 {
+    margin-right: 17%;
+  }
+  .check-list h3 {
+    margin-right: 13%;
   }
 }
