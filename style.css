@@ -918,7 +918,14 @@ footer p {
     height: 6vh;
     width: 25vw;
   }
-
+  .c-container {
+    padding-left: 25px;
+    padding-right: 0px;
+    margin-bottom: 12px;
+  }
+  .c-list-1 {
+    margin-right: 13%;
+  }
   .c-list-2 {
     margin-right: 17%;
   }
