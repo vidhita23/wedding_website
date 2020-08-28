@@ -917,7 +917,7 @@ footer p {
   .btn {
     height: 6vh;
     width: 25vw;
-    margin: 5% 100px;
+    margin: 5% 120px;
   }
   .c-container {
     padding-left: 25px;
@@ -925,12 +925,15 @@ footer p {
     margin-bottom: 12px;
   }
   .c-list-1 {
-    margin-right: 13%;
+    margin-right: 0%;
   }
   .c-list-2 {
-    margin-right: 17%;
+    margin-right: 0%;
   }
-  .check-list h3 {
+  /* .check-list h3 {
     margin-right: 13%;
+  } */
+  .check-list {
+    text-align: center;
   }
 }
